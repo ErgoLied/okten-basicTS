@@ -1,4 +1,4 @@
-class User{
+class User {
     constructor(
         public name: string,
         public username: string,
@@ -20,14 +20,15 @@ class User{
             catchPhrase: string,
             bs: string
         }
-    ) {}
+    ) {
+    }
 }
 
-let user:User = {
-    name: 'Nei ONeill',
-    username: '7pies',
-    email: 'yaneznayu@lol.kek',
-    address: {
+let user = new User(
+    'Nei ONeill',
+    '7pies',
+    'yaneznayu@lol.kek',
+    {
         street: 'valley of wisdom',
         suite: 'mid',
         city: 'orgrimmar',
@@ -37,14 +38,14 @@ let user:User = {
             lng: 0
         }
     },
-    phone: '2283604206934',
-    website: 'twitch.com',
-    company: {
+    '2283604206934',
+    'twitch.com',
+    {
         name: 'zelenogradskieigrushki',
         catchPhrase: 'game interesting logic deep learning',
         bs: 'real-time e-markets'
     }
-}
+);
 
 fetch('https://jsonplaceholder.typicode.com/posts', {
     method: 'POST',
